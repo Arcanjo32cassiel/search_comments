@@ -1,5 +1,6 @@
 const commentscontainer = document.getElementById('comments-container')
 const loadercontainer = document.querySelector('.loader')
+const filterinput = document.getElementById('filter')
 let page = 1
 
 const getComments = async() => {
@@ -58,3 +59,20 @@ function loader() {
 loader()
 
 // Filtragem
+
+filterinput.addEventListener('input', event => {
+    const inputvalue = event.target.value.toLocaleUpperCase()
+
+    const comments = document.querySelectorAll('.comment')
+
+    comments.forEach(comment => {
+        const commentname = comment.querySelector('.comment-name').textContent.toLocaleUpperCase()
+        const commentbody = comment.querySelector('.comment-body').textContent.toLocaleUpperCase()
+
+        if (commentname.includes(inputvalue) || commentbody.includes(inputvalue)) {
+            comment.style.display = 'flex'
+            return
+        }
+        comment.style.display = 'none'
+    })
+})
