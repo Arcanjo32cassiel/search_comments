@@ -51,7 +51,7 @@ h1 {
     border-radius: 10px;
 }
 
-.post {
+.comment {
     position: relative;
     background-color: #188fc7;
     box-shadow: 0 2px 4px #0ec2c24d;
@@ -63,20 +63,20 @@ h1 {
     max-width: 800px;
 }
 
-.post .post-title {
+.comment .comment-title {
     margin: 0;
 }
 
-.post .post-body {
+.comment .comment-body {
     margin: 20px 0 0;
     line-height: 1.5;
 }
 
-.post .post-info {
+.comment .comment-info {
     margin-left: 20px;
 }
 
-.post .number {
+.comment .number {
     position: absolute;
     top: -15px;
     left: -15px;
