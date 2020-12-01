@@ -68,8 +68,8 @@ filterinput.addEventListener('input', event => {
     comments.forEach(comment => {
         const commentname = comment.querySelector('.comment-name').textContent.toLocaleUpperCase()
         const commentbody = comment.querySelector('.comment-body').textContent.toLocaleUpperCase()
-
-        if (commentname.includes(inputvalue) || commentbody.includes(inputvalue)) {
+        const commentnumber = comment.querySelector('.number').textContent
+        if (commentname.includes(inputvalue) || commentbody.includes(inputvalue) || commentnumber.includes(inputvalue)) {
             comment.style.display = 'flex'
             return
         }
